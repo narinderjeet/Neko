@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.demo.vulnerable">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/logo1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo1"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:ignore="HardcodedDebugMode">
+        <activity android:name=".SP" />
+        <activity android:name=".sql" />
+        <activity android:name=".screen2" />
+        <activity android:name=".sql_injection" />
+        <activity android:name=".background" />
+
+        <service
+            android:name=".Timer"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".adb" />
+        <activity
+            android:name=".Congrats"
+            android:noHistory="true" />
+        <activity android:name=".permissions" />
+        <activity android:name=".screenshot" />
+        <activity android:name=".rootBypass" />
+        <activity android:name=".FirstScreen"/>
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Credential_logcat" />
+        <activity android:name=".MinOS" />
+        <activity android:name=".NPI_Data_Leakage" />
+        <activity android:name=".Password_In_MD5" />
+        <activity android:name=".secret_in_Log" />
+        <activity android:name=".Secret_key_vuln" />
+        <activity android:name=".SALT_AES" />
+        <activity android:name=".Allow_Backup" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".activity1" />
+        <activity android:name=".activity2" />
+        <activity android:name=".proguard" />
+        <activity android:name=".Debuggable" />
+        <activity android:name=".Credential_Source" />
+        <activity android:name=".Copy_Paste" />
+    </application>
+
+</manifest>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="headingColor">#5f0f6b</color>
+    <color name="descriptionTitleColor">@android:color/background_light</color>
+    <color name="descriptionColor">@android:color/holo_green_light</color>
+    <color name="challengeTitleColor">@android:color/background_light</color>
+    <color name="challengeColor">@android:color/holo_green_light</color>
+
+
+</resources>

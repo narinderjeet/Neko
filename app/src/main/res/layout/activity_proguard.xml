@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context="com.example.demo.vulnerable.proguard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="serif-monospace"
+            android:text="PROGUARD/DEXGUARD"
+            android:textAlignment="center"
+            android:textColor="@color/descriptionColor"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/circle_button">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dip"
+                android:background="@android:color/background_dark"
+                android:fontFamily="serif-monospace"
+                android:paddingRight="16dip"
+                android:text=" Description.."
+                android:textColor="@android:color/background_light"
+                android:textSize="30dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_alignStart="@+id/textView3"
+                android:layout_below="@+id/textView3"
+                android:background="@android:color/background_dark"
+                android:fontFamily="serif-monospace"
+                android:text="Generally, most applications are susceptible to reverse engineering due to the inherent nature of code. Most languages used to write apps today are rich in metadata that greatly aides a programmer in debugging the app."
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/textView4"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/background_dark"
+                android:fontFamily="serif-monospace"
+                android:text="Steps to be followed "
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/step1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textView14"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="serif-monospace"
+                android:text="1.Use enjarify to create a jar"
+                android:textAlignment="center"
+                android:textColor="#9300a5"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/next1"
+            android:layout_alignBottom="@+id/next1"
+            android:layout_alignLeft="@+id/next1"
+            android:layout_alignStart="@+id/next1"
+            android:layout_marginTop="16dip"
+            android:background="@drawable/button_purple"
+            android:text="next" />
+
+        <Button
+            android:id="@+id/next1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/false1"
+            android:layout_alignRight="@+id/false1"
+            android:layout_below="@+id/relativeLayout4"
+            android:layout_marginTop="16dip"
+            android:background="@drawable/button_purple"
+            android:text="next"
+            android:visibility="invisible" />
+
+
+        <Button
+            android:id="@+id/true1"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/relativeLayout4"
+            android:layout_alignStart="@+id/relativeLayout4"
+            android:layout_below="@+id/challenge"
+            android:layout_marginTop="16dip"
+            android:background="@drawable/button_purple"
+            android:text="Enabled"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/false1"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_alignBaseline="@+id/true1"
+            android:layout_alignBottom="@+id/true1"
+            android:layout_alignEnd="@+id/challenge"
+            android:layout_alignRight="@+id/challenge"
+            android:layout_marginTop="16dip"
+            android:background="@drawable/button_purple"
+            android:text="Disabled"
+            android:visibility="invisible" />
+
+        <!--<pl.droidsonroids.gif.GifImageView-->
+        <!--android:id="@+id/tick"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:src="@drawable/tick"-->
+        <!--android:visibility="invisible" />-->
+
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/next"
+            android:layout_alignBottom="@+id/next"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dip"
+            android:background="@drawable/green_button"
+            android:text="DONE"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/challenge"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/next"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/circle_button"
+            android:fontFamily="serif-monospace"
+            android:text="What is the status of the proguard rules"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="21sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+
+</ScrollView>

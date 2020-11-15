@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.demo.vulnerable.background"
+    tools:showIn="@layout/activity_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/background_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/backgroundTitle"
+            android:textSize="30dp"
+            android:textColor="@android:color/holo_green_light"
+            android:fontFamily="serif-monospace"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/backgroundl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/circle_button"
+            android:layout_below="@+id/background_title"
+            android:layout_marginTop="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/background_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description..."
+                android:textSize="20dp"
+                android:textColor="@android:color/background_light"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif-monospace"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/background_description"
+                android:text="Poor or missing authentication schemes allow an adversary to anonymously execute functionality within the mobile app or backend server used by the mobile app. Weaker authentication for mobile apps is fairly prevalent due to a mobile device's input form factor.
+Once the adversary understands how the authentication scheme is vulnerable, they fake or bypass authentication by submitting service requests to the mobile app's backend server and bypass any direct interaction with the mobile app.
+The business impact of poor authentication will typically result in the following at a minimum:
+Reputational Damage
+Information Theft; or
+Unauthorized Access to Data."
+                android:textColor="@android:color/holo_green_light"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="serif-monospace"/>
+
+        </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/backgroundl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:background="@drawable/circle_button"
+        android:layout_below="@+id/backgroundl1"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/background_timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Press the button to start the service"
+            android:textSize="20dp"
+            android:textColor="@android:color/background_light"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="serif-monospace"/>
+
+        <Button
+            android:id="@+id/background_start"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/background_timer"
+            android:text="Start"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/button_purple"
+            android:fontFamily="serif-monospace"/>
+
+        <Button
+            android:id="@+id/background_stop"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/background_timer"
+            android:layout_toRightOf="@+id/background_start"
+            android:text="Stop"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/button_purple"
+            android:fontFamily="serif-monospace"/>
+
+        <!--<Button-->
+            <!--android:id="@+id/background_check"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_below="@+id/background_stop"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:text="Check"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="#C83CC0"/>-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:background="@drawable/circle_button"
+        android:layout_below="@+id/backgroundl2"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/background_challenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Challenge"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="@android:color/background_light"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="serif-monospace"/>
+
+        <TextView
+            android:id="@+id/background_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/background_challenge"
+            android:text="Is there any vulnerability"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="@android:color/holo_green_light"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="serif-monospace"/>
+
+        <Button
+            android:id="@+id/background_yes"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/background_enter"
+            android:text="Yes"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_purple"
+            android:fontFamily="serif-monospace"/>
+
+        <Button
+            android:id="@+id/background_no"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/background_enter"
+            android:text="No"
+            android:layout_toRightOf="@+id/background_yes"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_purple"
+            android:fontFamily="serif-monospace"/>
+
+    </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

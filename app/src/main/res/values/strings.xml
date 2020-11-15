@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Neko</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_shared_preferences">sharedPreferences</string>
+    <string name="spTitle">Shared Preferences</string>
+    <string name="sqlTitle">SQL Database</string>
+    <string name="sql_injectionTitle">SQL Injection</string>
+    <string name="backgroundTitle">Background Resume</string>
+    <string name="adbTitle">Invoking Activity using ADB commands</string>
+    <string name="permissionsTitle">Sensitive Permissions</string>
+    <string name="screenTitle">Screenshot Leakage</string>
+    <string name="rootTitle">Tampering code to bypass root detection</string>
+    <string name="externalStorage">kjfbuidhffbdj</string>
+    <string name="hey">"13"</string>
+    <string name="case1">itsnotdifficult</string>
+    <string name="case2">itsnoteasy</string>
+    <string name="case3">itsgood</string>
+    <string name="case4">itsbad</string>
+    <string name="User_name_cred">neko</string>
+    <string name="User_pass_cred">vulnerable</string>
+    <string name="Cred">1310199527082002</string>
+    <string name="paste">"yamagata"</string>
+
+</resources>

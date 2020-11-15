@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.demo.vulnerable.MainActivity">
+
+    <Button
+        android:id="@+id/sp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="SharedPreferences"/>
+
+    <Button
+        android:id="@+id/sql"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="SQlite Database"
+        android:layout_below="@+id/sp"/>
+
+    <Button
+        android:id="@+id/screen2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Screen2"
+        android:layout_below="@+id/sql"/>
+
+    <Button
+        android:id="@+id/sql_injection"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="SQL Injection"
+        android:layout_below="@+id/screen2"/>
+
+    <Button
+        android:id="@+id/background"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Background Resume"
+        android:layout_below="@+id/sql_injection"/>
+
+    <Button
+        android:id="@+id/adb"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="ADB"
+        android:layout_below="@+id/background"/>
+
+    <Button
+        android:id="@+id/permissions"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Permissions"
+        android:layout_below="@+id/adb"/>
+
+    <Button
+        android:id="@+id/screenshot"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Screenshot Leakage"
+        android:layout_below="@+id/permissions"/>
+
+    <Button
+        android:id="@+id/root"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Root bypass"
+        android:layout_below="@+id/screenshot"/>
+
+
+</RelativeLayout>

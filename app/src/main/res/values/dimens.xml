@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="headingSize">24sp</dimen>
+    <dimen name="descriptionTitleSize">30dp</dimen>
+    <dimen name="descriptionSize">16dp</dimen>
+    <dimen name="challengeTitleSize">15dp</dimen>
+    <dimen name="challengeSize">30dp</dimen>
+    <dimen name="buttonSize">18dp</dimen>
+
+</resources>

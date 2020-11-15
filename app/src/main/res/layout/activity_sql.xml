@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.demo.vulnerable.sql"
+    tools:showIn="@layout/activity_sql">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/sql_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sqlTitle"
+            android:textSize="24sp"
+            android:textColor="@android:color/holo_green_light"
+            android:fontFamily="serif-monospace"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/sqll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/circle_button"
+            android:layout_below="@+id/sql_title"
+            android:layout_marginTop="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/sql_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description..."
+                android:textSize="20dp"
+                android:textColor="@android:color/background_light"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif-monospace"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sql_description"
+                android:text="Insecure data storage vulnerabilities occur when development teams assume that users or malware will not have access to a mobile device's filesystem and subsequent sensitive information in data-stores on the device. Filesystems are easily accessible.
+This can result in data loss, in the best case for one user, and in the worst case for many users. It may also result in the following technical impacts: extraction of the app's sensitive information via mobile malware, modified apps or forensic tools.
+Insecure data storage vulnerabilities typically lead to the following business risks for the organization that owns the risk app:
+Identity Theft
+Fraud
+Reputation Damage
+External Policy Violation (PCI); or
+Material Loss."
+                android:textColor="@android:color/holo_green_light"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="serif-monospace"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sqll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/circle_button"
+            android:layout_below="@+id/sqll1"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/sql_enterUP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter username and password"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/background_light"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="serif-monospace"/>
+
+            <EditText
+                android:id="@+id/sql_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sql_enterUP"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:hint="Enter username here..."
+                android:textColor="@android:color/holo_green_light"
+                android:textColorHint="#C83CC0"
+                android:textAlignment="center"
+                android:fontFamily="serif-monospace"/>
+
+            <EditText
+                android:id="@+id/sql_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sql_username"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:hint="Enter password here..."
+                android:textColor="@android:color/holo_green_light"
+                android:textColorHint="#C83CC0"
+                android:textAlignment="center"
+                android:fontFamily="serif-monospace"
+                android:inputType="textPassword"/>
+
+            <Button
+                android:id="@+id/sql_submitUP"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/sql_password"
+                android:text="Submit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_purple"
+                android:fontFamily="serif-monospace"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/circle_button"
+            android:layout_below="@+id/sqll2"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/enterSQL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter text inside SQL Database"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/background_light"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="serif-monospace"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/textSQL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enterSQL"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:hint="Enter text here..."
+                android:textColor="@android:color/holo_green_light"
+                android:textColorHint="#C83CC0"
+                android:textAlignment="center"
+                android:fontFamily="serif-monospace"
+                android:inputType="textPassword"/>
+
+            <Button
+                android:id="@+id/submitSQL"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/textSQL"
+                android:text="Submit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_purple"
+                android:fontFamily="serif-monospace"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

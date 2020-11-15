@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.demo.vulnerable.activity2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/activity2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Screenshot Leakage - Demo Activity 1"
+            android:textSize="22sp"
+            android:textColor="@android:color/holo_green_light"
+            android:fontFamily="serif-monospace"/>
+
+        <RelativeLayout
+            android:id="@+id/activity2_l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_button"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:layout_below="@+id/activity2_title"
+            android:layout_marginTop="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/activity2_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal details..."
+                android:textSize="20dp"
+                android:textColor="@android:color/background_light"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif-monospace"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity2_description"
+                android:text="Credit card number: 395839840203923 \nName: Abc \nAddress: #123, abc street, XYZ \nPin number: 1234"
+                android:textColor="@android:color/holo_green_light"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="serif-monospace"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity2_l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_button"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:layout_below="@+id/activity2_l1"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Try to take a screenshot of the activity."
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/background_light"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="serif-monospace"/>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

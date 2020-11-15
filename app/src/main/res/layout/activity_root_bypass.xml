@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.demo.vulnerable.rootBypass"
+    tools:showIn="@layout/activity_root_bypass">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/root_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rootTitle"
+            android:textSize="24sp"
+            android:textColor="@android:color/holo_green_light"
+            android:fontFamily="serif-monospace"/>
+
+        <RelativeLayout
+            android:id="@+id/root_l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/circle_button"
+            android:layout_below="@+id/root_title"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/root_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description..."
+                android:textSize="20dp"
+                android:textColor="@android:color/background_light"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif-monospace"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/root_description"
+                android:text="There are some sensitive functionalities in application which require the device to be not rooted and hence developer may inject checks for root detection and closing or killing the application when a device is found rooted. But, there are many third party tools or other techniques like reverse engineering to bypass root detection."
+                android:textColor="@android:color/holo_green_light"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="serif-monospace"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/root_l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/circle_button"
+            android:layout_below="@+id/root_l1"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/root_challengeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Challenge"
+                android:textSize="20dp"
+                android:textColor="@android:color/background_light"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="serif-monospace"/>
+
+            <TextView
+                android:id="@+id/root_challenge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/root_challengeTitle"
+                android:text="Click the below button to start counting"
+                android:textSize="18dp"
+                android:textColor="@android:color/holo_green_light"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="serif-monospace"/>
+
+            <Button
+                android:id="@+id/root_start"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/root_challenge"
+                android:background="@drawable/button_purple"
+                android:layout_marginTop="10dp"
+                android:text="Start"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="serif-monospace"/>
+
+            <TextView
+                android:id="@+id/root_detected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/root_start"
+                android:layout_marginTop="10dp"
+                android:textSize="25dp"
+                android:textColor="#C83CC0"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="serif-monospace"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

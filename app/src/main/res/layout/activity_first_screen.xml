@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    android:background="?attr/colorPrimary"
+    tools:context="com.example.demo.vulnerable.FirstScreen">
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/neko"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_green_light"
+            android:fontFamily="serif-monospace"
+            android:gravity="center"
+            android:text="Neko"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/credits"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:fontFamily="serif"-->
+<!--            android:gravity="center"-->
+<!--            android:src="@mipmap/info"-->
+<!--            android:text="i"-->
+<!--            android:clickable="true"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:textSize="24sp" />-->
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/one">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
+
+        <Button
+            android:id="@+id/m1head"
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:text="M1:Improper Platform Usage"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="serif-monospace"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/m2head"
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:text="M2:Insecure Data Storage"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/holo_green_light"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="serif-monospace"
+            android:layout_below="@+id/m1head"
+            android:layout_marginBottom="10dp"/>
+
+
+        <!--<Button-->
+            <!--android:id="@+id/m3head"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_below="@+id/m2head"-->
+            <!--android:layout_marginTop="13dp"-->
+            <!--android:background="@android:color/background_dark"-->
+            <!--android:fontFamily="serif-monospace"-->
+            <!--android:paddingHorizontal="@android:dimen/app_icon_size"-->
+            <!--android:paddingLeft="16dip"-->
+            <!--android:paddingRight="16dip"-->
+            <!--android:text="insecure communication"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textAllCaps="true"-->
+            <!--android:textColor="@android:color/holo_green_light"-->
+            <!--android:textSize="24sp"-->
+            <!--android:textStyle="bold" />-->
+
+        <Button
+            android:id="@+id/m4head"
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:text="M4:Insecure Authentication"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/holo_green_light"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="serif-monospace"
+            android:layout_below="@+id/m2head"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/m5head"
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:text="M5:Insufficent Cryptography"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/holo_green_light"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="serif-monospace"
+            android:layout_below="@+id/m4head"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/m6head"
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:text="M6:Insecure Authorization"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/holo_green_light"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="serif-monospace"
+            android:layout_below="@+id/m5head"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/m7head"
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:text="M7:Client Code Quality"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/holo_green_light"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="serif-monospace"
+            android:layout_below="@+id/m6head"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/m8head"
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:text="M8:Code Tampering"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/holo_green_light"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="serif-monospace"
+            android:layout_below="@+id/m7head"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/m9head"
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:text="M9:Reverse Engineering"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/holo_green_light"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="serif-monospace"
+            android:layout_below="@+id/m8head"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/m10head"
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:text="M10:Extraneous Functionality"
+            android:background="@android:color/background_dark"
+            android:textColor="@android:color/holo_green_light"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="serif-monospace"
+            android:layout_below="@+id/m9head"
+            android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

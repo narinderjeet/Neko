@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context="com.example.demo.vulnerable.SALT_AES">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="650dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/inputText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@android:color/background_dark"
+            android:fontFamily="serif-monospace"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:fontFamily="serif-monospace"
+            android:text="SALT in AES "
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/circle_button">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="11dp"
+                android:background="@android:color/background_dark"
+                android:fontFamily="serif-monospace"
+                android:paddingRight="16dip"
+                android:text=" Description.."
+                android:textColor="@android:color/background_light"
+                android:textSize="30dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_alignStart="@+id/textView3"
+                android:layout_below="@+id/textView3"
+                android:background="@android:color/background_dark"
+                android:fontFamily="serif-monospace"
+                android:text="Insecure use of cryptography is common in most mobile apps that leverage encryption. There are two fundamental ways that broken cryptography is manifested within mobile apps. First, the mobile app may use a process behind the encryption / decryption that is fundamentally flawed and can be exploited by the adversary to decrypt sensitive data. Second, the mobile app may implement or leverage an encryption / decryption algorithm that is weak in nature and can be directly decrypted by the adversary."
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/circle_button">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="14dp"
+                    android:background="@android:color/background_dark"
+                    android:fontFamily="serif-monospace"
+                    android:text="CHALLENGE"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView5"
+                    android:background="@android:color/background_dark"
+                    android:fontFamily="serif-monospace"
+                    android:text="Is there any SALT used with the Encryption"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/inputText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/textView4"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@android:color/background_dark"
+                android:fontFamily="serif-monospace"
+                android:hint=" ENTER TEXT TO ENCRYPT"
+                android:textColor="@color/challengeTitleColor"
+                android:textColorHint="@color/descriptionTitleColor" />
+
+            <Button
+                android:id="@+id/encrypt"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_above="@+id/relativeLayout3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/button_purple"
+                android:fontFamily="serif-monospace"
+                android:text="ENCRYPT" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relativeLayout"
+            android:layout_alignStart="@+id/relativeLayout"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_marginLeft="38dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/button_purple"
+            android:fontFamily="serif-monospace"
+            android:text="YES"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/yes"
+            android:layout_alignBottom="@+id/yes"
+            android:layout_alignEnd="@+id/relativeLayout"
+            android:layout_alignRight="@+id/relativeLayout"
+            android:layout_marginEnd="37dp"
+            android:layout_marginRight="37dp"
+            android:background="@drawable/button_purple"
+            android:fontFamily="serif-monospace"
+            android:text="NO"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp" />
+
+        <!--<pl.droidsonroids.gif.GifImageView-->
+        <!--android:id="@+id/tick"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_alignLeft="@+id/encrypt"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignStart="@+id/encrypt"-->
+        <!--android:layout_marginBottom="16dp"-->
+        <!--android:src="@mipmap/tick"-->
+        <!--android:visibility="invisible" />-->
+
+    </RelativeLayout>
+
+</ScrollView>

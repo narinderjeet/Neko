@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.demo.vulnerable.screenshot"
+    tools:showIn="@layout/activity_screenshot">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/screen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/screenTitle"
+            android:textSize="24sp"
+            android:textColor="@android:color/holo_green_light"
+            android:fontFamily="serif-monospace"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/screen_l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/circle_button"
+            android:layout_below="@+id/screen_title"
+            android:layout_marginTop="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/screen_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description..."
+                android:textSize="20dp"
+                android:textColor="@android:color/background_light"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif-monospace"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/screen_description"
+                android:text="By default, the Android platform takes screenshots of an application before it is sent to the background. This is intended to allow the user to view snapshots of what they were working on when they open the task/app switcher. When a screenshot is taken, it is persisted on the filesystem of the device.
+Any data present on-screen immediately prior to the transition gets stored to disk within the screenshot - allowing an attacker with physical access to the device to view and obtain this information."
+                android:textColor="@android:color/holo_green_light"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="serif-monospace"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/screen_l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/circle_button"
+            android:layout_below="@+id/screen_l1"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/screen_enterCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check the following activities"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/background_light"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="serif-monospace"/>
+
+            <Button
+                android:id="@+id/screen_a1"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/screen_enterCard"
+                android:layout_marginLeft="70dp"
+                android:text="Activity 1"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_purple"
+                android:fontFamily="serif-monospace"/>
+
+            <Button
+                android:id="@+id/screen_a2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/screen_enterCard"
+                android:layout_toRightOf="@+id/screen_a1"
+                android:text="Activity 2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_purple"
+                android:fontFamily="serif-monospace"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/circle_button"
+            android:layout_below="@+id/screen_l2"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/screen_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Which application is more secure"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/background_light"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="serif-monospace"/>
+
+            <Button
+                android:id="@+id/screen_a11"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/screen_test"
+                android:text="Activity 1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/button_purple"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif-monospace"/>
+
+            <Button
+                android:id="@+id/screen_a22"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/screen_test"
+                android:text="Activity 2"
+                android:layout_toRightOf="@+id/screen_a11"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_purple"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif-monospace"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
